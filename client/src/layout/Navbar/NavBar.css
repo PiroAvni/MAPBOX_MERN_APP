@@ -1,0 +1,8 @@
+
+.active {
+    text-decoration: underline !important;
+    text-decoration-thickness: 4px !important; 
+    text-underline-offset: 5px; /* Adjust the offset as needed */
+    color: #fefeff; /* Change the text color to your desired color */
+
+  }

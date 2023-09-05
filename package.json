@@ -1,0 +1,11 @@
+{
+  "name": "vite_react_mapbox_app_mern",
+  "version": "1.0.0",
+  "description": "Locator App with Mapbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
