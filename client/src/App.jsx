@@ -1,5 +1,5 @@
 
-import  {Navbar}  from './layout';
+import  {Navbar}  from './components';
 
 import Footer from './components/Footer/Footer';
 import { LocationMap, Employee,Home } from './pages';
