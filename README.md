@@ -14,7 +14,7 @@
   </ol>
 </details>
 
-![alt text](https://github.com/PiroAvni/MAPBOX_MERN_APP/blob/main/LOGO.png "GeoStory")
+![alt text](https://github.com/PiroAvni/MAPBOX_MERN_APP/blob/main/logo.png "GeoOffice Location")
 
 <!-- ABOUT THE PROJECT -->
 # GeoOffice Location
