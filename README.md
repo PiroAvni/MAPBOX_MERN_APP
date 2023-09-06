@@ -14,7 +14,10 @@
   </ol>
 </details>
 
-![alt text](https://github.com/PiroAvni/MAPBOX_MERN_APP/blob/main/logo.png "GeoOffice Location")
+
+  ![alt text](https://github.com/PiroAvni/MAPBOX_MERN_APP/blob/main/logo.png "GeoOffice Location"){ width="800" height="600" style="display: block; margin: 0 auto" }
+
+
 
 <!-- ABOUT THE PROJECT -->
 # GeoOffice Location
