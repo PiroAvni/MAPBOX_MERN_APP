@@ -10,11 +10,9 @@ import {
 } from '@mui/material';
 import { Lock, Menu} from '@mui/icons-material';
 import MapsHomeWorkIcon from '@mui/icons-material/MapsHomeWork';
-import photoURL from '../../Avni_Piro.png';
 import { useValue } from '../../context/ContextProvider';
 import UserIcons from '../UserIcon/UserIcon';
 
-const user = { name: 'test', photoURL };
 
 const NavBar = () => {
   const {
@@ -52,7 +50,7 @@ const NavBar = () => {
             <Button
               color="inherit"
               startIcon={<Lock />}
-              onClick={() => dispatch({ type: 'UPDATE_USER', payload: user })}
+              onClick={() => dispatch({ type: 'OPEN_LOGIN'})}
             >
               Login
             </Button>

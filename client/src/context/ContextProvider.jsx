@@ -13,6 +13,9 @@ import reducer from './reducer';
 
 const initialState = {
   currentUser: null,
+  openLogin: false,
+  loading: false,
+  alert: { open: false, severity: 'info', message: '' },
 };
 
 // The createContext function is used to create a new context. It takes the initialState as an argument and creates a context object called Context. 
