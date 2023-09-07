@@ -1,9 +1,23 @@
-require('dotenv').config()
+import dotenv from 'dotenv';
+import {connectDB} from "./config/db-setup.js";
+import app from "./app.js";
 
-const app = require('./app')
 
-const port = process.env.PORT || 5000
+dotenv.config();
 
-app.listen(port, () => {
-    console.log(`App listening on port ${port}`)
-})
+const port = process.env.PORT || 5000;
+
+const startServer = async () => {
+  try {
+    // connect to mongodb
+    await connectDB();
+
+    app.listen(port, () => {
+      console.log(`App listening on port ${port}`);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+startServer();

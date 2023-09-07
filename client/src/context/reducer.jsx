@@ -29,6 +29,7 @@ const reducer = (state, action) => {
       return { ...state, alert: action.payload };
 
     case "UPDATE_USER":
+      localStorage.setItem('currentUser', JSON.stringify(action.payload))
       // Reducer logic for the "UPDATE_USER" action
       return { ...state, currentUser: action.payload };
     // If none of the cases match the action type, the default case is executed, which throws an error indicating that there's

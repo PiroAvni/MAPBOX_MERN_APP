@@ -1,7 +1,7 @@
 
 // This code imports three functions from the 'react' library: createContext, useContext, and useReducer. 
 // These are necessary for creating and using React contexts and reducers.
-import { createContext, useContext, useReducer } from 'react';
+import { createContext, useContext, useEffect, useReducer } from 'react';
 
 // It also imports a reducer function from a local module named 'reducer'. 
 //This reducer is expected to define how the state should be updated in response to different actions.
@@ -38,9 +38,16 @@ export const useValue = () => {
 
 const ContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  return (
+  useEffect(()=>{
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'))
+    if(currentUser){
+      dispatch({type:'UPDATE_USER', payload: currentUser})
+    }
+  },[])
+  return(
     <Context.Provider value={{ state, dispatch }}>{children}</Context.Provider>
-  );
+  )
+    
 };
 
 export default ContextProvider;

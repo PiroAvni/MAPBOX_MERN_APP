@@ -13,17 +13,18 @@ const userSchema = mongoose.Schema(
     },
     password: { type: String, required: true },
     photoURL: { type: String, default: "" },
-    role: {
-      type: "String",
-      default: "basic",
-      enum: ["basic", "editor", "admin"],
-    },
-    lng: { type: Number, required: true },
-    lat: { type: Number, required: true },
-    active: { type: Boolean, default: true },
-  },
-  { timestamps: true }
+    // role: {
+    //   type: "String",
+    //   default: "basic",
+    //   enum: ["basic", "editor", "admin"],
+    // },
+    // lng: { type: Number, required: true },
+    // lat: { type: Number, required: true },
+    // active: { type: Boolean, default: true },
+   },
+  // { timestamps: true }
 );
 
 const User = mongoose.model("users", userSchema);
+
 export default User;
