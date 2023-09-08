@@ -9,13 +9,13 @@ import {
 } from "@mui/material";
 import { useEffect, useState } from "react";
 import AddLocation from "./AddLocation/AddLocation";
-import AddDetails from "./AddDetails/AddDetails";
+import AddDetails from "./AddDetails/InfoField/AddDetails";
 import AddImages from "./AddImages/AddImages";
 import { useValue } from "../../context/ContextProvider";
 
 const AddOffice = () => {
   const {
-    state: { images },
+    state: { images, details },
   } = useValue();
   const [activeStep, setActiveStep] = useState(0);
   const [steps, setSteps] = useState([
@@ -48,7 +48,15 @@ const AddOffice = () => {
     } else {
       if (steps[2].completed) setComplete(2, false);
     }
-  }, [images,steps]);
+  }, [images, steps]);
+
+  useEffect(() => {
+    if (details.title.length > 4 && details.description.length > 9) {
+      if (!steps[1].completed) setComplete(1, true);
+    } else {
+      if (steps[1].completed) setComplete(1, false);
+    }
+  }, [details, steps]);
 
   const setComplete = (index, status) => {
     setSteps((steps) => {

@@ -32,12 +32,13 @@ const BottomNav = () => {
       <Paper
         elevation={3}
         sx={{
-          position: "fixed",
+          position: "fixed ",
           bottom: 0,
           left: 0,
           right: 0,
           zIndex: 2,
           color: "primary",
+          boxShadow: "0px -5px 5px 0px rgba(0,0,0,0.5)"
         }}
       >
         <BottomNavigation

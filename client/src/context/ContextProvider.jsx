@@ -16,6 +16,8 @@ const initialState = {
   alert: { open: false, severity: "info", message: "" },
   profile: { open: false, file: null, photoURL: "" },
   images:[],
+  details:{title: "", description: ""},
+  location:{lng:0, lat:0},
 };
 
 // The createContext function is used to create a new context. It takes the initialState as an argument and creates a context object called Context.

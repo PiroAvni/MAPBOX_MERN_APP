@@ -16,7 +16,7 @@ export default function Footer() {
         p: 6,
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" bottom="0" >
         <Grid container spacing={5}>
           <Grid item xs={12} sm={4}>
             <Typography variant="h6" color="text.primary" gutterBottom>
