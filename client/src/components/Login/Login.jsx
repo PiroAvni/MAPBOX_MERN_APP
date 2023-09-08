@@ -39,6 +39,7 @@ const Login = () => {
 
     // send login request if it is not register and return 
     if (!isRegister) return login({ email, password }, dispatch);
+    
 const name = nameRef.current.value;
 const confirmPassword = confirmPasswordRef.current.value
 
