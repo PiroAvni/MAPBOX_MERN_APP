@@ -38,6 +38,11 @@ const reducer = (state, action) => {
     // If none of the cases match the action type, the default case is executed, which throws an error indicating that there's
     // no matched action. This can be helpful for debugging and catching unexpected actions.
 
+    case "UPDATE_IMAGES":
+      return { ...state, images:[...state.images, action.payload]};
+    case "DELETE_IMAGE":
+      return { ...state, images:state.images.filter(image => image !== action.payload)};
+
     default:
       // Default case, in case no matching action is found
       throw new Error("No matched action!");

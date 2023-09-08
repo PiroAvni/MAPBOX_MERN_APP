@@ -2,10 +2,13 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
+import { Footer } from "../../components";
 
 const HomePage = () => {
+
+  
   return (
-    <div style={{ height: "74vh", display: "flex", alignItems: "center" }}>
+    <div style={{ height: "68vh", display: "flex", alignItems: "center" }}>
       <Container maxWidth="md">
         <Paper elevation={3} style={{ padding: "20px" }}>
           <Grid container spacing={2}>
@@ -32,6 +35,7 @@ const HomePage = () => {
           </Grid>
         </Paper>
       </Container>
+      
     </div>
   );
 };

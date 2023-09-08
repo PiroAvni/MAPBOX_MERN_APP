@@ -1,42 +1,43 @@
 import { Navbar } from "./components";
 import Login from "./components/Login/Login";
 import Footer from "./components/Footer/Footer";
-import { LocationMap, Employee, Home } from "./pages";
-import { Routes, Route, Navigate } from "react-router-dom";
-import "./App.css";
+import { Home } from "./pages";
+import { Routes, Route } from "react-router-dom";
+import { useValue } from "./context/ContextProvider";
 import Notification from "./components/Notification/Notification";
 import Loading from "./components/Loading/Loading";
+import BottomNav from "./components/BottomNav/BottomNav";
+import "./App.css";
+
+
+
 
 function App() {
-  return (
-    <>
 
-      {/* <div className='App'> */}
+
+  const {
+    state: { currentUser },
+    dispatch,
+  } = useValue();
+
+  return (
+ 
+      <>
       <Loading/>
       <Notification />
       <Login />
-      <Navbar />
-      <Routes>
-        <Route index element={<Home />} />
-        {/* <Route path="/Login" element={<LoginPage />} />
-        <Route path="/Register" element={<RegisterPage />} /> */}
-        <Route path="/Location" element={<LocationMap />} />
-        <Route path="/Employee" element={<Employee />} />
-
-        {/* <Route path="" element={<PrivateRoute />}>
-          <Route path='/profile' element={<UserProfile />} />
-          <Route path="/homework">
-            <Route index element={<Pages.HomeworkListPage />} />
-            <Route path="/homework/:id" element={<Pages.HomeworkPage />} />
-          </Route>
-        </Route> */}
-
-        {/* <Route path = "*" element={<Pages.NotFoundPage />} /> */}
-        {/* </Route> */}
-      </Routes>
+      <Navbar /> 
+     {/* If user is NOT logged in dont render Home and Footer */}
+      {!currentUser ? (
+       <>
+      <Home />
       <Footer />
-      {/* </div> */}
-    </>
+        </>
+      ):( 
+     
+      <BottomNav/>
+      )}
+      </>
   );
 }
 
